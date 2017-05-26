@@ -5,6 +5,13 @@
  */
 package Paneles;
 
+import Tools.Tools;
+import java.awt.GridBagLayout;
+import java.awt.GridLayout;
+import java.awt.LayoutManager;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
 /**
  *
  * @author fknrk
@@ -16,6 +23,7 @@ public class PanelPacientes extends javax.swing.JPanel {
      */
     public PanelPacientes() {
         initComponents();
+       iniciaElementos();
     }
 
     /**
@@ -26,41 +34,141 @@ public class PanelPacientes extends javax.swing.JPanel {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        java.awt.GridBagConstraints gridBagConstraints;
 
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jButton1 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        txtNombre = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        txtApellidoP = new javax.swing.JTextField();
+        txtApellidoM = new javax.swing.JTextField();
+        jTextField4 = new javax.swing.JTextField();
+        jTextField5 = new javax.swing.JTextField();
 
         setBackground(new java.awt.Color(51, 255, 255));
+        setLayout(new java.awt.GridBagLayout());
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jLabel1.setText("Nombre");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        add(jLabel1, gridBagConstraints);
 
-        jButton1.setText("jButton1");
+        txtNombre.setMinimumSize(new java.awt.Dimension(30, 28));
+        txtNombre.setName(""); // NOI18N
+        txtNombre.setPreferredSize(new java.awt.Dimension(150, 28));
+        txtNombre.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtNombreKeyReleased(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.insets = new java.awt.Insets(3, 3, 3, 3);
+        add(txtNombre, gridBagConstraints);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(31, 31, 31)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(68, 68, 68)
-                .addComponent(jButton1)
-                .addContainerGap(172, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(42, 42, 42)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton1)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(235, Short.MAX_VALUE))
-        );
+        jLabel2.setText("Apellido P.");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 0;
+        add(jLabel2, gridBagConstraints);
+
+        jLabel3.setText("Apellido M.");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 0;
+        add(jLabel3, gridBagConstraints);
+
+        jLabel4.setText("Edad");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 2;
+        add(jLabel4, gridBagConstraints);
+
+        jLabel5.setText("Direccion");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 2;
+        add(jLabel5, gridBagConstraints);
+
+        txtApellidoP.setMinimumSize(new java.awt.Dimension(30, 28));
+        txtApellidoP.setPreferredSize(new java.awt.Dimension(150, 28));
+        txtApellidoP.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtApellidoPKeyReleased(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 1;
+        add(txtApellidoP, gridBagConstraints);
+
+        txtApellidoM.setMinimumSize(new java.awt.Dimension(30, 28));
+        txtApellidoM.setPreferredSize(new java.awt.Dimension(150, 28));
+        txtApellidoM.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtApellidoMKeyReleased(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 1;
+        add(txtApellidoM, gridBagConstraints);
+
+        jTextField4.setPreferredSize(new java.awt.Dimension(50, 28));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.insets = new java.awt.Insets(3, 3, 3, 3);
+        add(jTextField4, gridBagConstraints);
+
+        jTextField5.setPreferredSize(new java.awt.Dimension(300, 28));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.gridwidth = 2;
+        add(jTextField5, gridBagConstraints);
     }// </editor-fold>//GEN-END:initComponents
 
+    private void txtNombreKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNombreKeyReleased
+        // TODO add your handling code here:
+        txtNombre.setText(herramienteas.Capitalizador(txtNombre.getText()));
+    }//GEN-LAST:event_txtNombreKeyReleased
 
+    private void txtApellidoPKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtApellidoPKeyReleased
+        // TODO add your handling code here:
+         txtApellidoP.setText(herramienteas.Capitalizador(txtApellidoP.getText()));
+    }//GEN-LAST:event_txtApellidoPKeyReleased
+
+    private void txtApellidoMKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtApellidoMKeyReleased
+        // TODO add your handling code here:
+         txtApellidoM.setText(herramienteas.Capitalizador(txtApellidoM.getText()));
+    }//GEN-LAST:event_txtApellidoMKeyReleased
+
+public void iniciaElementos(){
+    //Etiquetas
+    JLabel lblNombre = new JLabel("Nombre:");
+    
+    //TextBoxes
+    
+    JTextField txtNombre = new JTextField(20);
+    
+
+}
+Tools herramienteas = new Tools();
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField txtApellidoM;
+    private javax.swing.JTextField txtApellidoP;
+    private javax.swing.JTextField txtNombre;
     // End of variables declaration//GEN-END:variables
 }

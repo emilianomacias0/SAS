@@ -144,6 +144,11 @@ public class VistaPrincipal extends javax.swing.JFrame {
             }
         });
         
+        
+        
+        
+        
+        
         pnlLateral.setLayout(layout);
         pnlLateral.add(btnInicio);
         pnlLateral.add(btnVisitas);
@@ -167,6 +172,8 @@ public class VistaPrincipal extends javax.swing.JFrame {
         pnlUsuarios.setVisible(false);
         pnlPacientes.setVisible(false);
     }
+    
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     // End of variables declaration//GEN-END:variables
